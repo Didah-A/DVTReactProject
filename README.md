@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+DVT DEEZER API music page
+- screenshots
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="1409" alt="Screenshot 2022-08-09 at 19 41 22" src="https://user-images.githubusercontent.com/25657649/183709602-c6870c4a-efed-4a47-8459-f0d3ee659e63.png"><img width="1359" alt="Screenshot 2022-08-09 at 19 42 04" src="https://user-images.githubusercontent.com/25657649/183709624-15599dae-d647-4674-89e2-ccd5a3d73e6f.png">
+
+
+<img width="1418" alt="Screenshot 2022-08-09 at 19 41 38" src="https://user-images.githubusercontent.com/25657649/183709615-8a0b0331-c214-4c79-84e2-e5d3991c1cc7.png">
 
 ## Available Scripts
 
