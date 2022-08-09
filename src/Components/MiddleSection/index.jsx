@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     flexDirection: "row",
     justifyContent: "center",
     background: "rgba(13, 3, 33, 0.8)",
+    minWidth: 700,
   },
   logo: {
     height: 300,

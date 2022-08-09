@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     justifyContent: "space-around",
     paddingLeft: 10,
     paddingRight: 10,
+    overflowY: "scroll",
   },
   main: {
     display: "flex",

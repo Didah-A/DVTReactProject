@@ -2,12 +2,14 @@ html,
 body {
   height: 100%;
   width: 100%;
+  min-width: 900px;
 }
 
 #root {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 63, 119, 0.744);
+  min-width: 900px;
 }
 
 body {
