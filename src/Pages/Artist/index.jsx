@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CardActionArea, Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import bg2 from "../../Assets/bg2.jpg";
 import Header from "../../Components/Header";
@@ -10,9 +10,7 @@ import {
   getArtistTracks,
   loadMoreAlbums,
 } from "../../Api/search";
-import { artistsList } from "../../Api/utils/artists";
 import CircularProgress from "@mui/material/CircularProgress";
-import ArtistCard from "../../Components/ArtistCard";
 import ArtistDetailsCard from "../../Components/ArtistDetails";
 import TrackCard from "../../Components/Track";
 import AlbumCard from "../../Components/Album";
@@ -26,7 +24,6 @@ const useStyles = makeStyles({
     width: "100%",
     display: "flex",
     flexDirection: "column",
-    // overflowY: "scroll",
   },
   loading: {
     margin: "auto auto",
@@ -59,9 +56,10 @@ const ArtistDetails = () => {
   const [albums, setAlbums] = useState([]);
   const [tracks, setTracks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [next, setNext] = useState(null);
+  const [next, setNext] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line
     getArtist(id).then((artist) => {
       setArtist(artist?.data);
     });
@@ -73,10 +71,11 @@ const ArtistDetails = () => {
       setNext(album?.data?.next);
       setLoading(false);
     });
+    // eslint-disable-next-line
   }, []);
 
   const LoadMoreAlbums = () => {
-    setNext(null);
+    setNext(false);
     loadMoreAlbums(next).then((album) => {
       setAlbums([...albums, ...album?.data?.data]);
       setNext(album?.data?.next || null);

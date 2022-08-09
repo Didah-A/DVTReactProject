@@ -5,7 +5,6 @@ import bg2 from "../../Assets/bg2.jpg";
 import Header from "../../Components/Header";
 import { useParams } from "react-router-dom";
 import { LoadMore, searchArtist } from "../../Api/search";
-import { artistsList } from "../../Api/utils/artists";
 import CircularProgress from "@mui/material/CircularProgress";
 import ArtistCard from "../../Components/ArtistCard";
 
@@ -46,11 +45,13 @@ const Search = () => {
   const [next, setNext] = useState(null);
 
   useEffect(() => {
+    // eslint-disable-next-line
     searchArtist(string).then((list) => {
       setLoading(false);
       setArtists(list?.data?.data);
       setNext(list?.data?.next);
     });
+    // eslint-disable-next-line
   }, []);
 
   const LoadMoreArtists = () => {

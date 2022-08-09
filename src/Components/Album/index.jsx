@@ -28,6 +28,7 @@ const AlbumCard = ({ album }) => {
         <img
           src={album?.cover_small || deezerLogo}
           style={{ borderRadius: 0, width: 30, height: 30, margin: "auto 0" }}
+          alt="deezer"
         />
         <Typography color="white" style={{ margin: "auto 0", paddingLeft: 20 }}>
           {album?.title}

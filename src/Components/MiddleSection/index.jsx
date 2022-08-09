@@ -32,7 +32,7 @@ const MiddleSection = () => {
         {`Music expresses that which cannot be said and on which it is impossible
         to be silent.`}
       </Typography>
-      <img src={headphones} className={classes.logo} />
+      <img src={headphones} className={classes.logo} alt="deezer" />
     </div>
   );
 };

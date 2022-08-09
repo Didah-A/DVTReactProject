@@ -14,7 +14,6 @@ const useStyles = makeStyles({
   },
   card: {
     width: 200,
-    background: "none",
     margin: 15,
     background: "rgba(13, 3, 33, 0.5)",
     boxShadow: "-1px 5px 5px -3px rgba(110,110,110,0.53)",

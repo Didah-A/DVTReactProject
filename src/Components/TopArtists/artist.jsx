@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: {
-    width: "100%",
     height: 100,
     marginTop: 30,
     width: 100,
@@ -33,7 +32,7 @@ const TopArtistsCard = ({ name, image, id }) => {
 
   return (
     <div className={classes.card} onClick={() => navigate(`artist/${id}`)}>
-      <img src={image} className={classes.image} />
+      <img src={image} className={classes.image} alt="deezer" />
       <Typography variant="body" color={"white"} className={classes.text}>
         {name}
       </Typography>

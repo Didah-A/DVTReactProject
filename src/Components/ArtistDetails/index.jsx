@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@mui/styles";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -43,6 +43,7 @@ const ArtistDetailsCard = ({ artist }) => {
         <img
           src={artist.picture_xl}
           style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+          alt="deezer"
         />
       </div>
       <div className={classes.info}>

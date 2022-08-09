@@ -44,9 +44,7 @@ const useStyles = makeStyles({
 
 const Header = ({ value, onSearch }) => {
   const classes = useStyles();
-  const [artists, setArtists] = useState([]);
   const [searchValue, setSearchValue] = useState(value || "");
-  const [loading, setLoading] = useState(false);
   const { string } = useParams();
   const navigate = useNavigate();
 
@@ -72,7 +70,12 @@ const Header = ({ value, onSearch }) => {
 
   return (
     <div className={classes.header}>
-      <img src={deezerLogo} className={classes.logo} onClick={nav} />
+      <img
+        src={deezerLogo}
+        className={classes.logo}
+        onClick={nav}
+        alt="deezer"
+      />
       <div className={classes.searchArea}>
         <input
           className={classes.searchField}

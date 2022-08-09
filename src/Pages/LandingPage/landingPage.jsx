@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CardActionArea, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import bg2 from "../../Assets/bg2.jpg";
 import headphones from "../../Assets/head.png";

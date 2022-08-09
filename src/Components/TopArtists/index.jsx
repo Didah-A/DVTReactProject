@@ -52,7 +52,7 @@ const TopArtists = () => {
         Suggested Artists:
       </Typography>
       <div className={classes.topArtists}>
-        {suggested.slice(0, 7).map((artist) => (
+        {suggested?.slice(0, 9)?.map((artist) => (
           <TopArtistsCard
             name={artist.name}
             image={artist.picture_medium}

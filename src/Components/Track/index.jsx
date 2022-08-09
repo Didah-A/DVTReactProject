@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@mui/styles";
 import deezerLogo from "../../Assets/deezer.png";
 import Typography from "@mui/material/Typography";
@@ -25,6 +25,7 @@ const TrackCard = ({ track }) => {
       <img
         src={track?.album?.cover_small || deezerLogo}
         style={{ borderRadius: 50, width: 30, height: 30, margin: "auto 0" }}
+        alt="deezer"
       />
       <Typography color="white" style={{ margin: "auto 0", paddingLeft: 20 }}>
         {track?.title_short}
