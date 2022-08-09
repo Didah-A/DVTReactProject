@@ -1,0 +1,12 @@
+button.BrainhubCarousel__arrows {
+  background-color: initial;
+  /* span {
+    border-color: #17a2b8;
+  } */
+}
+button.BrainhubCarousel__arrows:hover {
+  background-color: initial;
+}
+span {
+  border-color: #17a2b8;
+}
