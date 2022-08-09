@@ -14,3 +14,27 @@ export const LoadMore = (next) => {
     headers: { "Access-Control-Allow-Origin": "*" },
   });
 };
+
+export const getArtist = (id) => {
+  return axios.get(`${baseURL}/artist/${id}`, {
+    headers: { "Access-Control-Allow-Origin": "*" },
+  });
+};
+
+export const getArtistTracks = (id) => {
+  return axios.get(`${baseURL}/artist/${id}/top`, {
+    headers: { "Access-Control-Allow-Origin": "*" },
+  });
+};
+
+export const getArtistAlbums = (id) => {
+  return axios.get(`${baseURL}/artist/${id}/albums`, {
+    headers: { "Access-Control-Allow-Origin": "*" },
+  });
+};
+
+export const loadMoreAlbums = (next) => {
+  return axios.get(`${base}${next}`, {
+    headers: { "Access-Control-Allow-Origin": "*" },
+  });
+};

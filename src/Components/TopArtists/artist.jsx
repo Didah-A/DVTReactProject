@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
-import headphones from "../../Assets/back.png";
-import { searchArtist } from "../../Api/search";
-import { Button, Typography } from "@mui/material";
-import { artistsList } from "../../Api/utils/artists";
+import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { CardActionArea, Box, Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import bg2 from "../../Assets/bg2.jpg";
-import headphones from "../../Assets/head.png";
 import Header from "../../Components/Header";
 import { useParams } from "react-router-dom";
 import { LoadMore, searchArtist } from "../../Api/search";
@@ -47,13 +46,11 @@ const Search = () => {
   const [next, setNext] = useState(null);
 
   useEffect(() => {
-    // searchArtist(string).then((list) => {
-    //   setLoading(false);
-    //   setArtists(list?.data?.data);
-    //   setNext(list?.data?.next);
-    // });
-    setArtists(artistsList);
-    setLoading(false);
+    searchArtist(string).then((list) => {
+      setLoading(false);
+      setArtists(list?.data?.data);
+      setNext(list?.data?.next);
+    });
   }, []);
 
   const LoadMoreArtists = () => {

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@mui/styles";
-import { searchArtist } from "../../Api/search";
 import { Typography } from "@mui/material";
-import { artistsList } from "../../Api/utils/artists";
 import TopArtistsCard from "./artist";
+import { searchArtist } from "../../Api/search";
 
 const useStyles = makeStyles({
   topArtists: {
@@ -38,10 +37,9 @@ const TopArtists = () => {
   const [suggested, setSuggested] = useState([]);
 
   useEffect(() => {
-    // searchArtist(generateRandomString()).then((list) =>
-    //   setSuggested(list?.data?.data)
-    // );
-    setSuggested(artistsList);
+    searchArtist(generateRandomString()).then((list) =>
+      setSuggested([...list?.data?.data])
+    );
   }, []);
 
   const generateRandomString = () => {

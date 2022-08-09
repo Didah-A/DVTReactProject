@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@mui/styles";
 import headphones from "../../Assets/back.png";
-import { searchArtist } from "../../Api/search";
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 const useStyles = makeStyles({
   section: {

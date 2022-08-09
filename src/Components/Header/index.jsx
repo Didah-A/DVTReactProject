@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import deezerLogo from "../../Assets/deezer.png";
-import { searchArtist } from "../../Api/search";
 import { Button } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
 

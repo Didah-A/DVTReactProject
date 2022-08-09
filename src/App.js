@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from "./Pages/LandingPage";
-import { Container, Box } from "@mui/system";
+import { Box } from "@mui/system";
 import { makeStyles } from "@mui/styles";
 import DashBoard from "./Pages/LandingPage/landingPage";
 import Search from "./Pages/Search";
+import ArtistDetails from "./Pages/Artist";
 
 const useStyles = makeStyles({
   container: {
@@ -21,8 +21,7 @@ function App() {
           <Route path="/" component={<DashBoard />}>
             <Route index element={<DashBoard />} />
             <Route path="search/:string" element={<Search />} />
-            {/* <Route path="contact" element={<Contact />} /> */}
-            {/* <Route path="*" element={<NoPage />} /> */}
+            <Route path="artist/:id" element={<ArtistDetails />} />
           </Route>
         </Routes>
       </Box>
