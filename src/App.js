@@ -3,6 +3,7 @@ import LandingPage from "./Pages/LandingPage";
 import { Container, Box } from "@mui/system";
 import { makeStyles } from "@mui/styles";
 import DashBoard from "./Pages/LandingPage/landingPage";
+import Search from "./Pages/Search";
 
 const useStyles = makeStyles({
   container: {
@@ -19,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" component={<DashBoard />}>
             <Route index element={<DashBoard />} />
-            <Route path="search" element={<LandingPage />} />
+            <Route path="search/:string" element={<Search />} />
             {/* <Route path="contact" element={<Contact />} /> */}
             {/* <Route path="*" element={<NoPage />} /> */}
           </Route>

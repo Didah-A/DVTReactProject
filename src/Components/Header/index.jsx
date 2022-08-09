@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles";
 import deezerLogo from "../../Assets/deezer.png";
 import { searchArtist } from "../../Api/search";
 import { Button } from "@mui/material";
+import { useParams, useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   header: {
@@ -42,32 +43,47 @@ const useStyles = makeStyles({
   },
 });
 
-const Header = () => {
+const Header = ({ value, onSearch }) => {
   const classes = useStyles();
   const [artists, setArtists] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState(value || "");
   const [loading, setLoading] = useState(false);
+  const { string } = useParams();
+  const navigate = useNavigate();
 
   const search = () => {
-    setLoading(true);
-    searchArtist(searchValue).then((list) => {
-      setArtists(list?.data?.data);
-      setLoading(false);
-    });
+    if (!string) {
+      navigate(`search/${searchValue}`);
+    } else {
+      onSearch(searchValue);
+    }
   };
+
+  const nav = () => {
+    navigate("/");
+  };
+
+  const handleKeypress = (e) => {
+    if (e.key === "Enter") {
+      search();
+    }
+  };
+
   return (
     <div className={classes.header}>
-      <img src={deezerLogo} className={classes.logo} />
+      <img src={deezerLogo} className={classes.logo} onClick={nav} />
       <div className={classes.searchArea}>
         <input
           className={classes.searchField}
           placeholder="Search Artist..."
+          value={searchValue}
           inputprops={{
             type: "search",
           }}
+          onKeyDown={handleKeypress}
           onChange={(e) => setSearchValue(e.target.value)}
         />
-        <Button className={classes.Button} variant="contained">
+        <Button className={classes.Button} variant="contained" onClick={search}>
           Search
         </Button>
       </div>
