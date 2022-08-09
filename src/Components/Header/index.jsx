@@ -52,10 +52,12 @@ const Header = ({ value, onSearch }) => {
   const navigate = useNavigate();
 
   const search = () => {
-    if (!string) {
-      navigate(`search/${searchValue}`);
-    } else {
-      onSearch(searchValue);
+    if (searchValue.length > 0) {
+      if (!string) {
+        navigate(`/search/${searchValue}`);
+      } else {
+        onSearch(searchValue);
+      }
     }
   };
 

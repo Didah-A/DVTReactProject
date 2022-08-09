@@ -91,6 +91,7 @@ const Search = () => {
               image={artist.picture_big}
               fans={artist.nb_fan}
               albums={artist.nb_album}
+              id={artist.id}
             />
           ))}
       </Box>

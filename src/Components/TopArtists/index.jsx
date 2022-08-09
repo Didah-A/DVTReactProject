@@ -55,7 +55,11 @@ const TopArtists = () => {
       </Typography>
       <div className={classes.topArtists}>
         {suggested.slice(0, 7).map((artist) => (
-          <TopArtistsCard name={artist.name} image={artist.picture_medium} />
+          <TopArtistsCard
+            name={artist.name}
+            image={artist.picture_medium}
+            id={artist.id}
+          />
         ))}
       </div>
     </div>

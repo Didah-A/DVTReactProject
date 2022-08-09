@@ -8,6 +8,7 @@ import { makeStyles } from "@mui/styles";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AlbumIcon from "@mui/icons-material/Album";
 import { Box } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   header: {
@@ -37,10 +38,11 @@ const useStyles = makeStyles({
   },
 });
 
-const ArtistCard = ({ image, name, fans, albums }) => {
+const ArtistCard = ({ image, name, fans, albums, id }) => {
   const classes = useStyles();
+  const navigate = useNavigate();
   return (
-    <div className={classes.card}>
+    <div className={classes.card} onClick={() => navigate(`/artist/${id}`)}>
       <CardMedia
         component="img"
         height="150"

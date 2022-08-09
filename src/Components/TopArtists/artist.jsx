@@ -4,6 +4,7 @@ import headphones from "../../Assets/back.png";
 import { searchArtist } from "../../Api/search";
 import { Button, Typography } from "@mui/material";
 import { artistsList } from "../../Api/utils/artists";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: {
@@ -28,10 +29,13 @@ const useStyles = makeStyles({
   },
 });
 
-const TopArtistsCard = ({ name, image }) => {
+const TopArtistsCard = ({ name, image, id }) => {
   const classes = useStyles();
+
+  const navigate = useNavigate();
+
   return (
-    <div className={classes.card}>
+    <div className={classes.card} onClick={() => navigate(`artist/${id}`)}>
       <img src={image} className={classes.image} />
       <Typography variant="body" color={"white"} className={classes.text}>
         {name}
