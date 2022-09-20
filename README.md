@@ -1,3 +1,7 @@
+Demo - https://master--effulgent-taffy-95c456.netlify.app/
+
+NB - enable cors to view demo - https://cors-anywhere.herokuapp.com/corsdemo
+
 DVT DEEZER API music page
 - screenshots
 
